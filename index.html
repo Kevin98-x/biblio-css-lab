@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biblio — a community book exchange where neighbours share, swap, sell and borrow books with a refundable deposit.">
+  <meta name="author" content="Biblio Community Library">
+  <title>Biblio · Community Book Exchange</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <!-- decorative liquid background layers -->
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="site-header glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">B</span>
+      <span class="brand-word">Biblio</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="is-active">Home</a>
+      <a href="listings.html">Shelf</a>
+      <a href="borrow.html">Borrow</a>
+      <a href="sell.html">Sell &amp; Swap</a>
+      <a href="payment.html">Deposit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <p class="eyebrow">A neighbourhood book commons · Est. <time datetime="2024">2024</time></p>
+        <h1 class="hero-title">Pass the<br><em>story</em> on.</h1>
+        <p class="hero-lede">
+          Biblio is where the street keeps its books. <mark>Swap</mark> a finished novel,
+          <mark>sell</mark> the ones gathering dust, or <mark>borrow</mark> any title for as long
+          as you like — leave its price as a deposit and collect it back, in full, the day you return it.
+        </p>
+        <div class="hero-actions">
+          <a href="listings.html" class="btn btn--solid">Browse the shelf</a>
+          <a href="#how" class="btn btn--ghost">How it works</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>Books in circulation</dt><dd>4,210</dd></div>
+          <div><dt>Active members</dt><dd>1,860</dd></div>
+          <div><dt>Returned in full</dt><dd>98%</dd></div>
+        </dl>
+      </div>
+
+      <figure class="hero-figure glass">
+        <div class="book-spine-stack" aria-hidden="true">
+          <span class="spine s1">The Salt Path</span>
+          <span class="spine s2">Wind, Sand &amp; Stars</span>
+          <span class="spine s3">Things Fall Apart</span>
+          <span class="spine s4">A Grain of Wheat</span>
+          <span class="spine s5">The Overstory</span>
+        </div>
+        <figcaption>A living shelf — every spine has been somewhere before it reached you.</figcaption>
+      </figure>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how glass-soft" id="how">
+      <header class="section-head">
+        <h2>Three ways to use Biblio</h2>
+        <p>One small shopfront, run by the people who read here. We sit in the middle so neighbours can trust the exchange.</p>
+      </header>
+
+      <div class="how-grid">
+        <article class="how-card glass">
+          <span class="how-num">01</span>
+          <h3>Sell your books to us</h3>
+          <p>
+            Bring books you're done with. We assess condition, quote a fair price on the spot,
+            and pay you. From that moment the book belongs to the commons.
+          </p>
+          <a href="sell.html" class="link-arrow">Sell a book →</a>
+        </article>
+
+        <article class="how-card glass">
+          <span class="how-num">02</span>
+          <h3>Swap with a neighbour</h3>
+          <p>
+            Trade a title from your shelf for one of equal standing on ours. No money changes
+            hands — just stories changing hands. Membership covers the swap.
+          </p>
+          <a href="sell.html#swap" class="link-arrow">Start a swap →</a>
+        </article>
+
+        <article class="how-card glass">
+          <span class="how-num">03</span>
+          <h3>Borrow with a deposit</h3>
+          <p>
+            Want to take a book home? Leave its full price as a refundable deposit and keep it as
+            long as you need. Return it in matching condition and your money comes straight back.
+          </p>
+          <a href="borrow.html" class="link-arrow">Borrow a book →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE DEPOSIT PROMISE -->
+    <section class="promise">
+      <div class="promise-text">
+        <h2>The deposit, explained</h2>
+        <p>
+          Borrowing here isn't a fee — it's a promise you can take back. The full retail price of
+          the book is held as a deposit while it lives on your nightstand.
+        </p>
+        <ol class="promise-steps">
+          <li><strong>Checkout.</strong> We record the book's exact condition on a checklist — cover, spine, pages, markings, the lot — and you pay the deposit.</li>
+          <li><strong>Keep it.</strong> Read at your own pace. There's no due date, only the promise to bring it back.</li>
+          <li><strong>Return.</strong> We re-check the book against the same checklist. If it matches, your full deposit is refunded on the spot.</li>
+        </ol>
+        <p class="promise-note">
+          <abbr title="Frequently Asked Question">FAQ:</abbr> what if the condition slips? Minor wear is
+          expected and forgiven. Significant damage is deducted against the deposit at the rate shown on your checklist.
+        </p>
+      </div>
+
+      <aside class="promise-card glass" aria-label="Example deposit">
+        <h3>Example</h3>
+        <blockquote>
+          “I borrowed <cite>The Overstory</cite> for two months, finished it twice, and got every
+          shilling of my deposit back the morning I returned it.”
+          <footer>— Wanjiru, member since <time datetime="2024-03">March 2024</time></footer>
+        </blockquote>
+        <table class="mini-table">
+          <caption>Sample deposit ledger</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Book price (deposit held)</td><td>KSH 1,200</td></tr>
+            <tr><td>Condition deduction</td><td>KSH 0</td></tr>
+            <tr><td>Membership (annual)</td><td>KSH 500</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">Refunded on return</th><td>KSH 1,200</td></tr>
+          </tfoot>
+        </table>
+      </aside>
+    </section>
+
+    <!-- HOURS + NEWS -->
+    <section class="info-row">
+      <article class="glass info-card">
+        <h2>Opening hours</h2>
+        <table class="hours-table">
+          <thead>
+            <tr><th scope="col">Day</th><th scope="col">Open</th><th scope="col">Close</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Mon – Fri</th><td><time datetime="09:00">9:00</time></td><td><time datetime="19:00">7:00 pm</time></td></tr>
+            <tr><th scope="row">Saturday</th><td><time datetime="10:00">10:00</time></td><td><time datetime="17:00">5:00 pm</time></td></tr>
+            <tr><th scope="row">Sunday</th><td colspan="2">Community reading circle only</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article class="glass info-card">
+        <h2>On the noticeboard</h2>
+        <ul class="news-list">
+          <li><time datetime="2026-06-01">1 Jun</time> — Swap Saturday: bring three, take three.</li>
+          <li><time datetime="2026-06-08">8 Jun</time> — Poetry night with local writers.</li>
+          <li><time datetime="2026-06-15">15 Jun</time> — Children's story hour returns.</li>
+        </ul>
+        <details>
+          <summary>What counts as a fair swap?</summary>
+          <p>
+            Books are grouped into bands by age and condition. Any book may be swapped for another
+            in the same band. The desk will tell you a book's band when you bring it in.
+          </p>
+        </details>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="footer-cols">
+      <div>
+        <span class="brand-mark small">B</span>
+        <p>Biblio Community Book Exchange<br>Westlands, Nairobi</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="listings.html">The shelf</a></li>
+          <li><a href="borrow.html">Borrow a book</a></li>
+          <li><a href="sell.html">Sell &amp; swap</a></li>
+          <li><a href="payment.html">Deposits &amp; membership</a></li>
+          <li><a href="contact.html">Find us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>The promise</h3>
+        <p>Borrow with a deposit. Return in kind. Get it all back.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Biblio. A commons, not a shop.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

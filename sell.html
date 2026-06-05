@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sell your books to the Biblio exchange or propose a swap with a neighbour.">
+  <title>Sell &amp; Swap · Biblio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="sell">
+
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="site-header glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">B</span>
+      <span class="brand-word">Biblio</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="listings.html">Shelf</a>
+      <a href="borrow.html">Borrow</a>
+      <a href="sell.html" class="is-active">Sell &amp; Swap</a>
+      <a href="payment.html">Deposit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow">Bring books to the commons</p>
+      <h1>Sell or swap your books</h1>
+      <p class="page-lede">
+        Biblio sits in the middle of the exchange. <strong>Sell</strong> us books you're finished with
+        for a fair, on-the-spot price — or <strong>swap</strong> a title for one of equal band on our shelf.
+      </p>
+    </section>
+
+    <!-- SELL FORM -->
+    <div class="form-layout single">
+      <form class="glass form-card" id="sell-form" action="#" method="post" novalidate>
+        <h2>Offer a book for sale</h2>
+
+        <div class="field-grid">
+          <p class="field">
+            <label for="s-name">Your name</label>
+            <input type="text" id="s-name" name="name" placeholder="Otieno Adhiambo" required>
+          </p>
+          <p class="field">
+            <label for="s-email">Email</label>
+            <input type="email" id="s-email" name="email" placeholder="you@example.com" required>
+          </p>
+          <p class="field">
+            <label for="s-title">Book title</label>
+            <input type="text" id="s-title" name="title" placeholder="The Famished Road" required>
+          </p>
+          <p class="field">
+            <label for="s-author">Author</label>
+            <input type="text" id="s-author" name="author" placeholder="Ben Okri">
+          </p>
+          <p class="field">
+            <label for="s-year">Year published</label>
+            <input type="number" id="s-year" name="year" min="1900" max="2026" placeholder="1991">
+          </p>
+          <p class="field">
+            <label for="s-isbn">ISBN (optional)</label>
+            <input type="text" id="s-isbn" name="isbn" placeholder="978-0-09-928362-9">
+          </p>
+        </div>
+
+        <fieldset class="radio-set">
+          <legend>Genre</legend>
+          <label class="radio-pill"><input type="radio" name="genre" value="fiction" checked> Fiction</label>
+          <label class="radio-pill"><input type="radio" name="genre" value="nonfiction"> Non-fiction</label>
+          <label class="radio-pill"><input type="radio" name="genre" value="children"> Children's</label>
+          <label class="radio-pill"><input type="radio" name="genre" value="poetry"> Poetry</label>
+        </fieldset>
+
+        <!-- intake condition checklist -->
+        <fieldset class="checklist">
+          <legend>Honest condition check</legend>
+          <p class="checklist-note">
+            Tell us the truth about the book — it sets the price and the band. Our desk confirms it on intake.
+          </p>
+          <div class="checklist-grid">
+            <span class="checklist-head">Outside</span>
+            <label class="check-row"><input type="checkbox" name="s_cover" value="ok" checked> Cover clean &amp; intact</label>
+            <label class="check-row"><input type="checkbox" name="s_spine" value="ok" checked> Spine uncracked</label>
+            <span class="checklist-head">Inside</span>
+            <label class="check-row"><input type="checkbox" name="s_pages" value="ok" checked> Pages complete</label>
+            <label class="check-row"><input type="checkbox" name="s_clean" value="ok"> No notes or highlighting</label>
+          </div>
+        </fieldset>
+
+        <p class="field">
+          <label for="s-band">Condition band you'd estimate</label>
+          <select id="s-band" name="band" required>
+            <option value="A">Band A — as new</option>
+            <option value="B" selected>Band B — light wear</option>
+            <option value="C">Band C — well-loved</option>
+          </select>
+        </p>
+
+        <p class="field">
+          <label for="s-notes">Notes for the desk</label>
+          <textarea id="s-notes" name="notes" rows="3" placeholder="A little sun-fading on the spine, otherwise solid."></textarea>
+        </p>
+
+        <p class="field check-inline">
+          <label><input type="checkbox" name="s_agree" value="yes" required> I confirm this book is mine to sell.</label>
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn--solid">Get a quote</button>
+          <button type="reset" class="btn btn--ghost">Clear</button>
+        </div>
+        <p class="form-result" id="sell-result" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <!-- SWAP SECTION -->
+    <section class="glass-soft swap-band" id="swap">
+      <header class="section-head">
+        <h2>Prefer a swap?</h2>
+        <p>No money changes hands. Trade a book for another in the same condition band.</p>
+      </header>
+      <div class="swap-grid">
+        <article class="how-card glass">
+          <span class="how-num">A↔A</span>
+          <h3>Same band, even trade</h3>
+          <p>Bring a Band A book, take any Band A book. The desk verifies both against the checklist.</p>
+        </article>
+        <article class="how-card glass">
+          <span class="how-num">+</span>
+          <h3>Top up across bands</h3>
+          <p>Swapping up a band? Pay the small difference shown on the <a href="payment.html">deposit page</a>.</p>
+        </article>
+        <article class="how-card glass">
+          <span class="how-num">∞</span>
+          <h3>Swap as often as you like</h3>
+          <p>Membership covers unlimited swaps. The shelf keeps moving, and so do you.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- payout table -->
+    <section class="catalogue">
+      <h2>What we typically pay</h2>
+      <div class="table-scroll">
+        <table class="book-table">
+          <caption>Indicative buy-back prices by band</caption>
+          <thead>
+            <tr>
+              <th scope="col">Band</th>
+              <th scope="col">Condition</th>
+              <th scope="col">We pay (% of shelf price)</th>
+              <th scope="col">Swap value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row"><span class="dot dot--a"></span> A</th><td>As new</td><td>up to 60%</td><td>Full band</td></tr>
+            <tr><th scope="row"><span class="dot dot--b"></span> B</th><td>Light wear</td><td>up to 40%</td><td>Same band</td></tr>
+            <tr><th scope="row"><span class="dot dot--c"></span> C</th><td>Well-loved</td><td>up to 25%</td><td>Same band</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="footer-cols">
+      <div>
+        <span class="brand-mark small">B</span>
+        <p>Biblio Community Book Exchange<br>Westlands, Nairobi</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="listings.html">The shelf</a></li>
+          <li><a href="borrow.html">Borrow a book</a></li>
+          <li><a href="sell.html">Sell &amp; swap</a></li>
+          <li><a href="payment.html">Deposits &amp; membership</a></li>
+          <li><a href="contact.html">Find us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>The promise</h3>
+        <p>Borrow with a deposit. Return in kind. Get it all back.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Biblio. A commons, not a shop.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pay your refundable borrow deposit or renew your Biblio membership.">
+  <title>Deposit &amp; Membership · Biblio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="payment">
+
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="site-header glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">B</span>
+      <span class="brand-word">Biblio</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="listings.html">Shelf</a>
+      <a href="borrow.html">Borrow</a>
+      <a href="sell.html">Sell &amp; Swap</a>
+      <a href="payment.html" class="is-active">Deposit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow">Deposits &amp; membership</p>
+      <h1>Hold your deposit</h1>
+      <p class="page-lede">
+        Your deposit is held securely and refunded in full when your book returns in matching condition.
+        Pay a borrow deposit here, or renew the membership that covers your swaps.
+      </p>
+    </section>
+
+    <!-- membership progress -->
+    <section class="glass-soft progress-band">
+      <h2>Your membership year</h2>
+      <p class="muted">8 of 12 months used — renew any time to keep swapping.</p>
+      <label for="member-progress" class="visually-strong">Membership progress</label>
+      <progress id="member-progress" max="12" value="8">8 of 12 months</progress>
+    </section>
+
+    <div class="form-layout">
+      <!-- DEPOSIT / PAYMENT FORM -->
+      <form class="glass form-card" id="payment-form" action="#" method="post" novalidate>
+        <h2>Payment details</h2>
+
+        <fieldset class="radio-set">
+          <legend>What are you paying for?</legend>
+          <label class="radio-pill"><input type="radio" name="pay_type" value="deposit" checked> Borrow deposit</label>
+          <label class="radio-pill"><input type="radio" name="pay_type" value="membership"> Membership</label>
+          <label class="radio-pill"><input type="radio" name="pay_type" value="buy"> Buy a book outright</label>
+        </fieldset>
+
+        <div class="field-grid">
+          <p class="field">
+            <label for="p-name">Cardholder / payer name</label>
+            <input type="text" id="p-name" name="payer" placeholder="Wanjiru Kamau" required>
+          </p>
+          <p class="field">
+            <label for="p-email">Email for receipt</label>
+            <input type="email" id="p-email" name="email" placeholder="you@example.com" required>
+          </p>
+          <p class="field">
+            <label for="p-book">Book / membership reference</label>
+            <select id="p-book" name="reference" required>
+              <option value="" selected disabled>Choose…</option>
+              <option value="things-fall-apart" data-amount="950">Deposit · Things Fall Apart — 950</option>
+              <option value="the-overstory" data-amount="1200">Deposit · The Overstory — 1,200</option>
+              <option value="sapiens" data-amount="1100">Deposit · Sapiens — 1,100</option>
+              <option value="membership" data-amount="500">Annual membership — 500</option>
+            </select>
+          </p>
+          <p class="field">
+            <label for="p-amount">Amount (KSH)</label>
+            <input type="number" id="p-amount" name="amount" min="0" step="50" placeholder="1200" required>
+          </p>
+        </div>
+
+        <fieldset class="radio-set">
+          <legend>Payment method</legend>
+          <label class="radio-pill"><input type="radio" name="method" value="mpesa" checked> M-Pesa</label>
+          <label class="radio-pill"><input type="radio" name="method" value="card"> Card</label>
+          <label class="radio-pill"><input type="radio" name="method" value="cash"> Cash at desk</label>
+        </fieldset>
+
+        <div class="field-grid" id="card-fields">
+          <p class="field">
+            <label for="p-card">Card number</label>
+            <input type="text" id="p-card" name="card_number" inputmode="numeric" placeholder="4242 4242 4242 4242" autocomplete="cc-number">
+          </p>
+          <p class="field">
+            <label for="p-expiry">Expiry</label>
+            <input type="month" id="p-expiry" name="expiry" autocomplete="cc-exp">
+          </p>
+          <p class="field">
+            <label for="p-cvv">CVV</label>
+            <input type="password" id="p-cvv" name="cvv" maxlength="4" placeholder="•••" autocomplete="cc-csc">
+          </p>
+          <p class="field">
+            <label for="p-phone">M-Pesa phone</label>
+            <input type="tel" id="p-phone" name="mpesa_phone" placeholder="+254 700 000 000">
+          </p>
+        </div>
+
+        <p class="field check-inline">
+          <label><input type="checkbox" name="save" value="yes"> Remember these details for next time</label>
+        </p>
+        <p class="field check-inline">
+          <label><input type="checkbox" name="terms" value="yes" required> I agree that deposits are refunded on matching return only.</label>
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn--solid">Pay &amp; hold deposit</button>
+          <button type="reset" class="btn btn--ghost">Clear</button>
+        </div>
+        <p class="form-result" id="payment-result" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- PRICING ASIDE -->
+      <aside class="glass deposit-summary" aria-label="Pricing">
+        <h2>What costs what</h2>
+        <table class="mini-table">
+          <caption>Biblio fees at a glance</caption>
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Borrow deposit</td><td>Book's full price <em>(refundable)</em></td></tr>
+            <tr><td>Annual membership</td><td>KSH 500</td></tr>
+            <tr><td>Swap (same band)</td><td>Free with membership</td></tr>
+            <tr><td>Cross-band top-up</td><td>From KSH 100</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><th scope="row">Late / damage</th><td>From deposit only</td></tr>
+          </tfoot>
+        </table>
+
+        <hr>
+
+        <h3>Deposit safety</h3>
+        <p class="muted small">Held in a ring-fenced account, never spent. Refunded the same day you return a matching book.</p>
+        <label for="refund-meter" class="small">Members refunded in full</label>
+        <meter id="refund-meter" min="0" max="100" low="50" high="90" optimum="100" value="98">98%</meter>
+        <p class="meter-read">98% of all deposits returned in full</p>
+
+        <blockquote class="aside-quote">
+          “We don't profit from your deposit. We just keep it safe until you keep your promise.”
+        </blockquote>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="footer-cols">
+      <div>
+        <span class="brand-mark small">B</span>
+        <p>Biblio Community Book Exchange<br>Westlands, Nairobi</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="listings.html">The shelf</a></li>
+          <li><a href="borrow.html">Borrow a book</a></li>
+          <li><a href="sell.html">Sell &amp; swap</a></li>
+          <li><a href="payment.html">Deposits &amp; membership</a></li>
+          <li><a href="contact.html">Find us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>The promise</h3>
+        <p>Borrow with a deposit. Return in kind. Get it all back.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Biblio. A commons, not a shop.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

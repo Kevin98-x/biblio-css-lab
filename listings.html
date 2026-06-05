@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse the Biblio shelf — books available to borrow, swap, or buy from the community exchange.">
+  <title>The Shelf · Biblio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="listings">
+
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="site-header glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">B</span>
+      <span class="brand-word">Biblio</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="listings.html" class="is-active">Shelf</a>
+      <a href="borrow.html">Borrow</a>
+      <a href="sell.html">Sell &amp; Swap</a>
+      <a href="payment.html">Deposit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow">The commons shelf</p>
+      <h1>What's on the shelf today</h1>
+      <p class="page-lede">
+        Every title here is owned by the exchange. Borrow it with a deposit, swap for it, or buy it
+        outright. <abbr title="In stock">Avail.</abbr> shows how many copies are currently on the shelf.
+      </p>
+    </section>
+
+    <!-- condition key -->
+    <section class="glass-soft key-band">
+      <h2 class="visually-strong">Condition bands</h2>
+      <dl class="condition-key">
+        <div><dt><span class="dot dot--a"></span> Band A</dt><dd>As new — tight spine, clean pages.</dd></div>
+        <div><dt><span class="dot dot--b"></span> Band B</dt><dd>Read once or twice, light shelf wear.</dd></div>
+        <div><dt><span class="dot dot--c"></span> Band C</dt><dd>Well-loved — creases, notes, character.</dd></div>
+      </dl>
+    </section>
+
+    <!-- main catalogue -->
+    <section class="catalogue">
+      <h2>Fiction &amp; literature</h2>
+      <div class="table-scroll">
+        <table class="book-table">
+          <caption>Available fiction titles, updated <time datetime="2026-06-04">4 June 2026</time></caption>
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Band</th>
+              <th scope="col">Price / Deposit</th>
+              <th scope="col">Avail.</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Things Fall Apart</th>
+              <td>Chinua Achebe</td>
+              <td><span class="dot dot--a"></span> A</td>
+              <td>KSH 950</td>
+              <td>3</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">A Grain of Wheat</th>
+              <td>Ngũgĩ wa Thiong'o</td>
+              <td><span class="dot dot--b"></span> B</td>
+              <td>KSH 780</td>
+              <td>2</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">The Overstory</th>
+              <td>Richard Powers</td>
+              <td><span class="dot dot--a"></span> A</td>
+              <td>KSH 1,200</td>
+              <td>1</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">The Salt Path</th>
+              <td>Raynor Winn</td>
+              <td><span class="dot dot--c"></span> C</td>
+              <td>KSH 600</td>
+              <td>4</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Wind, Sand and Stars</th>
+              <td>Antoine de Saint-Exupéry</td>
+              <td><span class="dot dot--b"></span> B</td>
+              <td>KSH 690</td>
+              <td>2</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Non-fiction &amp; ideas</h2>
+      <div class="table-scroll">
+        <table class="book-table">
+          <caption>Available non-fiction titles</caption>
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Band</th>
+              <th scope="col">Price / Deposit</th>
+              <th scope="col">Avail.</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Sapiens</th>
+              <td>Yuval Noah Harari</td>
+              <td><span class="dot dot--b"></span> B</td>
+              <td>KSH 1,100</td>
+              <td>2</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">Thinking, Fast and Slow</th>
+              <td>Daniel Kahneman</td>
+              <td><span class="dot dot--a"></span> A</td>
+              <td>KSH 1,350</td>
+              <td>1</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+            <tr>
+              <th scope="row">The Wretched of the Earth</th>
+              <td>Frantz Fanon</td>
+              <td><span class="dot dot--c"></span> C</td>
+              <td>KSH 540</td>
+              <td>3</td>
+              <td><a href="borrow.html" class="table-link">Borrow</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- featured pick using figure -->
+    <section class="featured">
+      <figure class="glass featured-card">
+        <div class="featured-cover" aria-hidden="true">
+          <span class="cover-title">The<br>Overstory</span>
+          <span class="cover-author">Richard Powers</span>
+        </div>
+        <figcaption>
+          <h2>This month's circle read</h2>
+          <p>
+            A novel of nine strangers and the trees that bind them. One copy on the shelf —
+            borrow it before the circle meets on <time datetime="2026-06-20">20 June</time>.
+          </p>
+          <a href="borrow.html" class="btn btn--solid">Reserve to borrow</a>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- FAQ via details -->
+    <section class="glass-soft faq">
+      <h2>Shelf questions</h2>
+      <details>
+        <summary>Can I buy a book outright instead of borrowing?</summary>
+        <p>Yes. Pay the price shown and it's yours to keep — no return, no refund needed. Ask at the desk or note it on the deposit page.</p>
+      </details>
+      <details>
+        <summary>What if the book I want has zero copies?</summary>
+        <p>Add yourself to the waitlist on the <a href="contact.html">contact page</a> and we'll message you the moment a copy returns.</p>
+      </details>
+      <details>
+        <summary>How is a book's band decided?</summary>
+        <p>Our desk grades every book on intake against the same condition checklist used at borrow and return. The band is written inside the front cover.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="footer-cols">
+      <div>
+        <span class="brand-mark small">B</span>
+        <p>Biblio Community Book Exchange<br>Westlands, Nairobi</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="listings.html">The shelf</a></li>
+          <li><a href="borrow.html">Borrow a book</a></li>
+          <li><a href="sell.html">Sell &amp; swap</a></li>
+          <li><a href="payment.html">Deposits &amp; membership</a></li>
+          <li><a href="contact.html">Find us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>The promise</h3>
+        <p>Borrow with a deposit. Return in kind. Get it all back.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Biblio. A commons, not a shop.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

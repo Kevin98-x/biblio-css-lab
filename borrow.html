@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Borrow a book from Biblio by leaving a refundable deposit. Record the condition checklist on checkout.">
+  <title>Borrow a Book · Biblio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="borrow">
+
+  <div class="liquid-bg" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="site-header glass">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">B</span>
+      <span class="brand-word">Biblio</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="listings.html">Shelf</a>
+      <a href="borrow.html" class="is-active">Borrow</a>
+      <a href="sell.html">Sell &amp; Swap</a>
+      <a href="payment.html">Deposit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <p class="eyebrow">Borrow with a deposit</p>
+      <h1>Take a book home</h1>
+      <p class="page-lede">
+        Leave the book's full price as a deposit and read for as long as you like. The condition
+        checklist below is recorded now and re-checked on return — match it, and every shilling comes back.
+      </p>
+    </section>
+
+    <div class="form-layout">
+
+      <!-- BORROW FORM -->
+      <form class="glass form-card" id="borrow-form" action="#" method="post" novalidate>
+        <h2>Borrower &amp; book</h2>
+
+        <div class="field-grid">
+          <p class="field">
+            <label for="b-name">Full name</label>
+            <input type="text" id="b-name" name="name" placeholder="Wanjiru Kamau" required>
+          </p>
+          <p class="field">
+            <label for="b-member">Membership ID</label>
+            <input type="text" id="b-member" name="member_id" placeholder="BIB-0001" pattern="BIB-[0-9]{4}">
+          </p>
+          <p class="field">
+            <label for="b-email">Email</label>
+            <input type="email" id="b-email" name="email" placeholder="you@example.com" required>
+          </p>
+          <p class="field">
+            <label for="b-phone">Phone</label>
+            <input type="tel" id="b-phone" name="phone" placeholder="+254 700 000 000">
+          </p>
+          <p class="field">
+            <label for="b-title">Book title</label>
+            <select id="b-title" name="title" required>
+              <option value="" selected disabled>Choose a title…</option>
+              <option value="things-fall-apart" data-price="950">Things Fall Apart — KSH 950</option>
+              <option value="a-grain-of-wheat" data-price="780">A Grain of Wheat — KSH 780</option>
+              <option value="the-overstory" data-price="1200">The Overstory — KSH 1,200</option>
+              <option value="sapiens" data-price="1100">Sapiens — KSH 1,100</option>
+              <option value="thinking-fast-slow" data-price="1350">Thinking, Fast and Slow — KSH 1,350</option>
+            </select>
+          </p>
+          <p class="field">
+            <label for="b-date">Borrow date</label>
+            <input type="date" id="b-date" name="borrow_date" required>
+          </p>
+        </div>
+
+        <fieldset class="radio-set">
+          <legend>How long do you expect to keep it?</legend>
+          <label class="radio-pill"><input type="radio" name="duration" value="2w" checked> A couple of weeks</label>
+          <label class="radio-pill"><input type="radio" name="duration" value="1m"> About a month</label>
+          <label class="radio-pill"><input type="radio" name="duration" value="open"> Open-ended</label>
+        </fieldset>
+
+        <!-- CONDITION CHECKLIST -->
+        <fieldset class="checklist">
+          <legend>Condition checklist — recorded at checkout</legend>
+          <p class="checklist-note">
+            Tick each part that is intact and clean right now. This exact list is checked again on
+            return. The desk attendant confirms it with you before the book leaves.
+          </p>
+
+          <div class="checklist-grid">
+            <span class="checklist-head">Outside the book</span>
+            <label class="check-row"><input type="checkbox" name="cond_cover" value="ok" checked> Front &amp; back cover unmarked</label>
+            <label class="check-row"><input type="checkbox" name="cond_spine" value="ok" checked> Spine tight, no creases</label>
+            <label class="check-row"><input type="checkbox" name="cond_corners" value="ok" checked> Corners square, not bumped</label>
+            <label class="check-row"><input type="checkbox" name="cond_jacket" value="ok"> Dust jacket present (if any)</label>
+
+            <span class="checklist-head">Inside the book</span>
+            <label class="check-row"><input type="checkbox" name="cond_pages" value="ok" checked> All pages present &amp; uncreased</label>
+            <label class="check-row"><input type="checkbox" name="cond_markings" value="ok" checked> No writing, highlighting or notes</label>
+            <label class="check-row"><input type="checkbox" name="cond_binding" value="ok" checked> Binding holds, no loose leaves</label>
+            <label class="check-row"><input type="checkbox" name="cond_stains" value="ok"> No stains, water marks or odour</label>
+          </div>
+
+          <p class="field">
+            <label for="b-notes">Anything else about the condition?</label>
+            <textarea id="b-notes" name="condition_notes" rows="3" placeholder="e.g. small ink dot on page 42, noted at checkout."></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset class="radio-set">
+          <legend>Recorded condition band</legend>
+          <label class="radio-pill"><input type="radio" name="band" value="A" checked> Band A · as new</label>
+          <label class="radio-pill"><input type="radio" name="band" value="B"> Band B · light wear</label>
+          <label class="radio-pill"><input type="radio" name="band" value="C"> Band C · well-loved</label>
+        </fieldset>
+
+        <p class="field check-inline">
+          <label><input type="checkbox" name="agree" value="yes" required> I understand the deposit is refunded only if the return checklist matches.</label>
+        </p>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn--solid">Record &amp; take the book</button>
+          <button type="reset" class="btn btn--ghost">Clear</button>
+        </div>
+        <p class="form-result" id="borrow-result" role="status" aria-live="polite"></p>
+      </form>
+
+      <!-- DEPOSIT SUMMARY ASIDE -->
+      <aside class="glass deposit-summary" aria-label="Deposit summary">
+        <h2>Your deposit</h2>
+        <p class="summary-line">
+          <span>Book selected</span>
+          <strong id="sum-title">—</strong>
+        </p>
+        <p class="summary-line">
+          <span>Deposit held</span>
+          <strong id="sum-deposit">KSH 0</strong>
+        </p>
+        <p class="summary-line muted">
+          <span>Refunded on matching return</span>
+          <strong id="sum-refund">KSH 0</strong>
+        </p>
+
+        <hr>
+
+        <h3>How the return works</h3>
+        <ol class="return-steps">
+          <li>Bring the book back, any day we're open.</li>
+          <li>We re-check it against <em>this</em> checklist.</li>
+          <li>Match confirmed → full deposit returned.</li>
+        </ol>
+
+        <div class="match-demo">
+          <h3>Checklist match</h3>
+          <p class="muted small">Tick boxes on the left to see the match meter move — return must reach the same score.</p>
+          <label for="match-meter" class="small">Condition score at checkout</label>
+          <meter id="match-meter" min="0" max="8" low="3" high="6" optimum="8" value="6">6 of 8</meter>
+          <p class="meter-read"><span id="meter-count">6</span> / 8 checks intact</p>
+        </div>
+
+        <blockquote class="aside-quote">
+          “The deposit isn't a charge. It's just your promise, held safely until you keep it.”
+        </blockquote>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="site-footer glass">
+    <div class="footer-cols">
+      <div>
+        <span class="brand-mark small">B</span>
+        <p>Biblio Community Book Exchange<br>Westlands, Nairobi</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="listings.html">The shelf</a></li>
+          <li><a href="borrow.html">Borrow a book</a></li>
+          <li><a href="sell.html">Sell &amp; swap</a></li>
+          <li><a href="payment.html">Deposits &amp; membership</a></li>
+          <li><a href="contact.html">Find us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3>The promise</h3>
+        <p>Borrow with a deposit. Return in kind. Get it all back.</p>
+      </div>
+    </div>
+    <p class="copyright">&copy; <time datetime="2026">2026</time> Biblio. A commons, not a shop.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
