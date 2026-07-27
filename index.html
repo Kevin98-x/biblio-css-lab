@@ -40,6 +40,8 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <p class="eyebrow">A neighbourhood book commons · Est. <time datetime="2024">2024</time></p>
+        <p id="welcome-banner" class="welcome-banner" role="status" aria-live="polite"></p>
+        <button type="button" id="change-name" class="text-btn">Not you? Change name</button>
         <h1 class="hero-title">Pass the<br><em>story</em> on.</h1>
         <p class="hero-lede">
           Biblio is where the street keeps its books. <mark>Swap</mark> a finished novel,
@@ -49,7 +51,10 @@
         <div class="hero-actions">
           <a href="listings.html" class="btn btn--solid">Browse the shelf</a>
           <a href="#how" class="btn btn--ghost">How it works</a>
+          <button type="button" id="surprise-btn" class="btn btn--ghost">Surprise me</button>
+          <button type="button" id="theme-btn" class="btn btn--ghost">🌙 Evening shelf</button>
         </div>
+        <p id="surprise-out" class="surprise-out" role="status" aria-live="polite"></p>
         <dl class="hero-stats">
           <div><dt>Books in circulation</dt><dd>4,210</dd></div>
           <div><dt>Active members</dt><dd>1,860</dd></div>
@@ -126,6 +131,15 @@
           <abbr title="Frequently Asked Question">FAQ:</abbr> what if the condition slips? Minor wear is
           expected and forgiven. Significant damage is deducted against the deposit at the rate shown on your checklist.
         </p>
+        <button type="button" class="btn btn--ghost" data-toggle="deposit-more" data-more="Show details" data-less="Hide details">Show details</button>
+        <div id="deposit-more" hidden>
+          <p class="promise-note">
+            The condition checklist has eight checks — four outside the book, four inside. On return, each
+            check is compared against what was recorded at checkout. A full match returns 100% of the deposit;
+            each unmatched check carries a small, clearly-listed deduction, and the desk always explains any
+            deduction before it's applied.
+          </p>
+        </div>
       </div>
 
       <aside class="promise-card glass" aria-label="Example deposit">

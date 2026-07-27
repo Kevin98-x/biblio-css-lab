@@ -1,9 +1,7 @@
-# --- Biblio submission: only HTML goes to GitHub ---
-# The CSS / JS / assets exist locally so the site looks good while you build,
-# but they are NOT pushed. On GitHub Pages the pages render as pure HTML,
-# which is exactly what the assignment asks for.
+# --- JS lab submission ---
+# The external stylesheet AND the external JavaScript are both graded now,
+# so css/ and js/ are pushed. Only local placeholder assets and noise stay out.
 
-js/
 assets/
 
 # editor / OS noise
@@ -13,6 +11,6 @@ Thumbs.db
 .idea/
 *.log
 
-# build / packaging
+# packaging
 *.zip
 node_modules/

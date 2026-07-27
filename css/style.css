@@ -1,3 +1,8 @@
+/* ============================================================
+   BIBLIO — Community Book Exchange
+   Liquid + clear glass theme · neutral book palette
+   (brown / cream / dark brown), warm paper texture
+   ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Spline+Sans:wght@400;500;600&display=swap');
 
@@ -693,3 +698,74 @@ main > section:nth-child(4) { animation-delay: 0.29s; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   JS LAB — styles for interactive features
+   ============================================================ */
+
+/* welcome message banner (Home) */
+.welcome-banner {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 0.2rem 0 0.1rem;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.welcome-banner.is-shown { opacity: 1; transform: translateY(0); }
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--brown-deep);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.6rem;
+}
+.text-btn:hover { color: var(--accent); }
+
+/* surprise-me output */
+.surprise-out {
+  min-height: 1.4em;
+  font-weight: 600;
+  color: var(--good-deep);
+  margin-top: 0.4rem;
+}
+
+/* form validation error styling */
+.field-invalid {
+  border-color: #b5462f !important;
+  background: rgba(181, 70, 47, 0.06) !important;
+  box-shadow: 0 0 0 3px rgba(181, 70, 47, 0.15) !important;
+}
+.field-error {
+  display: block;
+  color: #b5462f;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.form-result.is-error { color: #b5462f; }
+
+/* dusk theme — JS toggles .theme-dusk on <body> */
+body.theme-dusk {
+  --cream:      #1a1410;
+  --cream-2:    #241a12;
+  --paper:      #2a1f16;
+  --ink:        #f0e6d8;
+  --bark:       #f4ece0;
+  --brown-deep: #d9b892;
+  --brown:      #c9a87f;
+  --glass-bg:   rgba(42, 31, 22, 0.55);
+  --glass-bg-2: rgba(42, 31, 22, 0.4);
+  --glass-brd:  rgba(201, 168, 127, 0.25);
+}
+body.theme-dusk .site-nav a { color: var(--brown-deep); }
+body.theme-dusk h1, body.theme-dusk h2, body.theme-dusk h3 { color: var(--bark); }
+
+/* gallery: allow flip on click (JS toggles .is-flipped) */
+.flip-card.is-flipped .flip-inner { transform: rotateY(180deg); }
