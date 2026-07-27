@@ -38,7 +38,7 @@
       <h1>Take a book home</h1>
       <p class="page-lede">
         Leave the book's full price as a deposit and read for as long as you like. The condition
-        checklist below is recorded now and re-checked on return — match it, and every shilling comes back.
+        checklist below is recorded now and re-checked on return. Match it, and every shilling comes back.
       </p>
     </section>
 
@@ -69,11 +69,11 @@
             <label for="b-title">Book title</label>
             <select id="b-title" name="title" required>
               <option value="" selected disabled>Choose a title…</option>
-              <option value="things-fall-apart" data-price="950">Things Fall Apart — KSH 950</option>
-              <option value="a-grain-of-wheat" data-price="780">A Grain of Wheat — KSH 780</option>
-              <option value="the-overstory" data-price="1200">The Overstory — KSH 1,200</option>
-              <option value="sapiens" data-price="1100">Sapiens — KSH 1,100</option>
-              <option value="thinking-fast-slow" data-price="1350">Thinking, Fast and Slow — KSH 1,350</option>
+              <option value="things-fall-apart" data-price="950">Things Fall Apart · KSH 950</option>
+              <option value="a-grain-of-wheat" data-price="780">A Grain of Wheat · KSH 780</option>
+              <option value="the-overstory" data-price="1200">The Overstory · KSH 1,200</option>
+              <option value="sapiens" data-price="1100">Sapiens · KSH 1,100</option>
+              <option value="thinking-fast-slow" data-price="1350">Thinking, Fast and Slow · KSH 1,350</option>
             </select>
           </p>
           <p class="field">
@@ -91,7 +91,7 @@
 
         <!-- CONDITION CHECKLIST -->
         <fieldset class="checklist">
-          <legend>Condition checklist — recorded at checkout</legend>
+          <legend>Condition checklist, recorded at checkout</legend>
           <p class="checklist-note">
             Tick each part that is intact and clean right now. This exact list is checked again on
             return. The desk attendant confirms it with you before the book leaves.
@@ -140,7 +140,7 @@
         <h2>Your deposit</h2>
         <p class="summary-line">
           <span>Book selected</span>
-          <strong id="sum-title">—</strong>
+          <strong id="sum-title">Not selected</strong>
         </p>
         <p class="summary-line">
           <span>Deposit held</span>
@@ -162,7 +162,7 @@
 
         <div class="match-demo">
           <h3>Checklist match</h3>
-          <p class="muted small">Tick boxes on the left to see the match meter move — return must reach the same score.</p>
+          <p class="muted small">Tick boxes on the left to see the match meter move. Return must reach the same score.</p>
           <label for="match-meter" class="small">Condition score at checkout</label>
           <meter id="match-meter" min="0" max="8" low="3" high="6" optimum="8" value="6">6 of 8</meter>
           <p class="meter-read"><span id="meter-count">6</span> / 8 checks intact</p>

@@ -1,5 +1,5 @@
 /* ============================================================
-   BIBLIO — external JavaScript (JS lab)
+   BIBLIO: external JavaScript (JS lab)
    Features:
      1. Welcome message (prompt for name, greet on Home)
      2. Form validation (required fields + error messages)
@@ -27,7 +27,7 @@
   });
 
   /* ==========================================================
-     FEATURE 1 — WELCOME MESSAGE
+     FEATURE 1: WELCOME MESSAGE
      Prompt the user for their name and greet them on the Home page.
      The name is remembered so we don't ask on every visit.
      ========================================================== */
@@ -65,7 +65,7 @@
   }
 
   /* ==========================================================
-     FEATURE 2 — FORM VALIDATION
+     FEATURE 2: FORM VALIDATION
      Check every required field is filled before submitting.
      Show a clear error message if any required field is blank.
      ========================================================== */
@@ -132,7 +132,7 @@
       'borrow-form':  'Book recorded. Bring it back in matching condition for a full refund.',
       'sell-form':    'Thanks! We\'ll review and message you a quote shortly.',
       'payment-form': 'Deposit held safely. A receipt is on its way to your email.',
-      'contact-form': 'Message sent — we\'ll write back within a day.'
+      'contact-form': 'Message sent. We\'ll write back within a day.'
     };
     return map[id] || 'Submitted successfully.';
   }
@@ -166,7 +166,7 @@
   }
 
   /* ==========================================================
-     FEATURE 3 — DYNAMIC CONTENT (several interactive features)
+     FEATURE 3: DYNAMIC CONTENT (several interactive features)
      a) Show / hide the deposit explainer (toggle content)
      b) "Surprise me" button picks a random book (change text)
      c) Theme switch button (change colours of the page)
@@ -184,17 +184,17 @@
       });
     });
 
-    // (b) surprise book picker — changes text of an element
+    // (b) surprise book picker: changes text of an element
     const pickBtn = $('#surprise-btn');
     const pickOut = $('#surprise-out');
     if (pickBtn && pickOut) {
       const books = [
-        'Things Fall Apart — Chinua Achebe',
-        'The Overstory — Richard Powers',
-        'A Grain of Wheat — Ngũgĩ wa Thiong\'o',
-        'Sapiens — Yuval Noah Harari',
-        'The Salt Path — Raynor Winn',
-        'Wind, Sand and Stars — Antoine de Saint-Exupéry'
+        'Things Fall Apart, by Chinua Achebe',
+        'The Overstory, by Richard Powers',
+        'A Grain of Wheat, by Ngũgĩ wa Thiong\'o',
+        'Sapiens, by Yuval Noah Harari',
+        'The Salt Path, by Raynor Winn',
+        'Wind, Sand and Stars, by Antoine de Saint-Exupéry'
       ];
       pickBtn.addEventListener('click', function () {
         const choice = books[Math.floor(Math.random() * books.length)];
@@ -202,7 +202,7 @@
       });
     }
 
-    // (c) theme switch — changes the colour theme of the site
+    // (c) theme switch: changes the colour theme of the site
     const themeBtn = $('#theme-btn');
     if (themeBtn) {
       themeBtn.addEventListener('click', function () {
@@ -236,7 +236,7 @@
     const update = function () {
       const opt = sel.options[sel.selectedIndex];
       const price = Number(opt && opt.dataset ? opt.dataset.price || 0 : 0);
-      const title = opt && opt.value ? opt.textContent.split(' — ')[0] : '—';
+      const title = opt && opt.value ? opt.textContent.split(' · ')[0] : 'Not selected';
       setText('#sum-title', title);
       setText('#sum-deposit', fmt(price));
       setText('#sum-refund', fmt(price));
